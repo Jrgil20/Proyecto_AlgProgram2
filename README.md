@@ -1,12 +1,68 @@
 # CentroDeEstudiantes
-Este es el proyecto academico desarrollado en la materia de algoritmos y programacion 2, basado en el lenguaje de programacion C, el cual tiene como objetivo la gestion de registros de estudiantes, cursos y materias.
+Este es el proyecto academico desarrollado en la materia de algoritmos y programacion 2, basado en el lenguaje de programacion C++, el cual tiene como objetivo la gestion de registros de estudiantes, cursos y materias.
 
-bajo la supervision del profesor: Omar Jesus Hernandez
- 
+Bajo la supervision del profesor: Omar Jesus Hernandez
+
+## Tabla de Contenidos
+- [Descripción General y Propósito](#descripción-general-y-propósito)
+- [Requisitos del Sistema](#requisitos-del-sistema)
+- [Instalación](#instalación)
+- [Uso del Sistema](#uso-del-sistema)
+- [Estructuras de Datos](#estructuras)
+- [Funciones Principales](#funciones-principales)
+- [Archivo y Persistencia de Datos](#importación-y-exportación)
+- [Contribuidores](#contribuidores)
+- [Licencia](#licencia)
 
 ## Descripción General y Propósito
 
 El proyecto `CentroDeEstudiantes` está diseñado para gestionar registros de estudiantes, cursos y materias en una institución educativa. Proporciona funcionalidades para agregar, modificar, eliminar y consultar información sobre estudiantes, cursos y materias. El objetivo principal es facilitar la administración académica y el seguimiento del desempeño estudiantil.
+
+## Requisitos del Sistema
+
+Para compilar y ejecutar este proyecto necesitas:
+- Compilador de C++ compatible con C++11 o superior
+- Al menos 64MB de RAM
+- Sistema operativo Windows o Linux
+
+## Instalación
+
+Para instalar y configurar el sistema en tu equipo local:
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/usuario/CentroDeEstudiantes.git
+```
+
+2. Navega al directorio del proyecto:
+```bash
+cd CentroDeEstudiantes
+```
+
+3. Compila el programa:
+```bash
+g++ CentroDeEstudiantes.cpp -o CentroDeEstudiantes
+```
+
+4. Ejecuta el programa:
+```bash
+./CentroDeEstudiantes
+```
+
+## Uso del Sistema
+
+El sistema presenta un menú principal con tres opciones:
+
+1. **MANTENIMIENTO**: Para gestionar las tablas base del sistema (materias, cursos y personas).
+2. **CONTROL DE ESTUDIOS**: Para gestionar la inscripción de estudiantes en cursos.
+3. **CONSULTAS**: Para realizar diversas consultas sobre el sistema.
+
+### Ejemplo de uso:
+
+1. Selecciona la opción 1 (MANTENIMIENTO)
+2. Selecciona la opción 1 (MATERIAS)
+3. Selecciona la opción 1 (AGREGAR)
+4. Sigue las instrucciones para ingresar los datos de la materia
 
 ## Estructuras
 
@@ -89,8 +145,27 @@ El proyecto también incluye funciones para consultar y generar reportes:
 - `C_CursosDeAnyoLapso`: Muestra los cursos de un año y lapso específicos.
 - `C_Alumno`: Muestra los cursos y calificaciones de un estudiante específico.
 
-### Importación y Exportación
+## Importación y Exportación
 
 El sistema permite guardar y cargar datos desde archivos:
 - `Exportar_Materias`, `Exportar_Cursos`, `Exportar_Personas`: Guardan datos en archivos.
 - `Importar_Materias`, `Importar_Cursos`, `Importar_Personas`: Cargan datos desde archivos.
+
+## Reglas del Sistema
+
+- Un alumno solo puede tener aprobada una materia una vez; luego no puede reinscribirla.
+- Un alumno puede reprobar una materia máximo 4 veces; después no podrá inscribirse más.
+- Un alumno puede retirar una materia un número ilimitado de veces.
+- Cuando se elimina una materia, se eliminan todos los cursos asociados.
+- Cuando se elimina un curso o un alumno, se eliminan todas sus referencias en el sistema.
+
+## Contribuidores
+
+Este proyecto fue desarrollado por:
+- Gabriel Castellano (C.I: 28059781)
+- Jesus Gil (C.I: 30175126)
+- Andres Guilarte (C.I: 30246084)
+
+## Licencia
+
+Este proyecto es para fines académicos. Todos los derechos reservados.
